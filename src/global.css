@@ -1,0 +1,70 @@
+#duck-logo {
+  height: 30px; 
+  width: 30px;
+  margin: 5px;
+}
+
+#text-logo {
+  font-size: large;
+  color: white;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+footer {
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+  background-color: #333333;
+}
+
+#cursor-cloud {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  animation: rotate 22s infinite;
+}
+
+#cursor-blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(200px);
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.25
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
