@@ -22,13 +22,14 @@ header {
 main {
   flex-grow: 1;
   z-index: 1;
-  font-family: Outfit, sans-serif;
-  min-height: 100vh;
+  /* font-family: Outfit, sans-serif; */
+  min-height: 115vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: spac; */
+  /* justify-content: center; */
   align-items: center;
   gap: 6rem;
+  /* background-color: white; */
 }
 
 body {
@@ -41,18 +42,78 @@ body {
 
 footer {
   border-top: 1px solid rgb(255, 255, 255, 0.1);
-  background-color: #333333;
+  /* background-color: #111111; */
+  backdrop-filter: blur(200px);
   z-index: 1;
 }
 
 #title-box {
   /* background-color: green; */
+  margin-top: 1rem;
+  display: flex;
+  gap: 5px;
+  font-family: 'Inter', 'Poppins', 'Outfit', sans-serif;
+  font-style: normal;
 }
 
-#title-box > * {
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: yellow; */
+}
+
+#title-text > h1 {
   font-size: 7rem;
+  margin-bottom: 0;
+  line-height: 6.5rem;
 }
 
+#calc-logo {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#calc-svg {
+  height: 17rem;
+  color: white;
+}
+
+.theme-button:hover {
+  background: none;
+  color: white;
+  outline: 1px solid white;
+}
+
+.theme-button:active {
+  background: grey;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: grey;
+  padding: 50px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  padding-inline-start: 0px;
+}
+
+li > a {
+  color: white;
+}
+
+.form-control:focus {
+  border-color: white;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px white;
+}
 
 #cursor-cloud {
   position: absolute;
@@ -67,9 +128,9 @@ footer {
 }
 
 #cursor-blur {
-  height: 120%;
+  height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   backdrop-filter: blur(200px);
 }
 

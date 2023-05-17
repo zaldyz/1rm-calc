@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Outfit:wght@600&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap"
-      rel="stylesheet"
     />
     <link
       rel="stylesheet"
@@ -24,6 +24,10 @@
       media="screen"
       href="src/global.css"
     />
+    <script
+      src="https://kit.fontawesome.com/bc91c7ee27.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="src/index.js"></script>
   </head>
   <body>
@@ -33,32 +37,92 @@
     </header>
     <main>
       <div id="title-box">
-        <h1>ONE</h1>
-        <h1 style="margin-left: 2rem">REP</h1>
-        <h1 style="margin-left: 3rem">MAX</h1>
+        <div id="title-text">
+          <h1>One</h1>
+          <h1 style="margin-left: 2rem">Rep</h1>
+          <h1 style="margin-left: 3rem">Max</h1>
+        </div>
+        <div id="calc-logo">
+          <svg
+            id="calc-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              fill="currentColor"
+              d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM96 64H288c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"
+            />
+          </svg>
+        </div>
       </div>
-      <section style="color: white">
-        <div class="input-group mb-3 input-group-md">
+      <div id="input-container">
+        <div
+          class="input-group mb-3 input-group-md"
+          style="
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px white;
+            border-radius: 5px;
+          "
+        >
           <input
             type="number"
-            class="form-control bg-transparent"
+            class="form-control bg-transparent text-light"
             aria-label="Weight of lift (kilograms)"
+            min="0"
           />
           <div class="input-group-append">
-            <span class="input-group-text bg-transparent text-light">kg</span>
+            <span class="input-group-text bg-transparent text-muted">kg</span>
           </div>
           <input
             type="number"
-            class="form-control bg-transparent"
+            class="form-control bg-transparent text-light"
             aria-label="Number of repititions"
+            min="0"
           />
           <div class="input-group-append">
-            <span class="input-group-text bg-transparent text-light">Reps</span>
+            <span class="input-group-text bg-transparent text-muted">Reps</span>
           </div>
         </div>
-      </section>
+        <button class="btn theme-button">
+          Calculate! <i class="fa-solid fa-calculator" style="margin: 3px"></i>
+        </button>
+      </div>
     </main>
-    <footer>About Me</footer>
+    <footer>
+      <div class="footer-content">
+        <ul class="social-links">
+          <li>
+            <a target="_blank" href="https://www.instagram.com/zaldyzz"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.twitter.com/zaddyzt">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://open.spotify.com/user/shalloess">
+              <i class="fa-brands fa-spotify"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.github.com/zaldyz">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+        <h6>
+          Designed by
+          <a target="_blank" href="https://www.github.com/zaldyz">zaldyz</a>
+        </h6>
+      </div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
