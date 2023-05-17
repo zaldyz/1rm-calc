@@ -49,7 +49,7 @@ footer {
 
 #title-box {
   /* background-color: green; */
-  margin-top: 1rem;
+  margin-top: 5rem;
   display: flex;
   gap: 5px;
   font-family: 'Inter', 'Poppins', 'Outfit', sans-serif;
@@ -63,11 +63,78 @@ footer {
   /* background-color: yellow; */
 }
 
-#title-text > h1 {
+.title-line {
   font-size: 7rem;
   margin-bottom: 0;
   line-height: 6.5rem;
 }
+
+#title-text {
+  /* position: relative; */
+}
+
+.word-container {
+  position: relative;
+}
+
+.copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: fade 10s linear infinite, background-scroll 10s linear infinite;
+}
+
+@keyframes background-scroll {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes fade {
+  0%, 34%, 100% {
+    opacity: 0%;
+  }
+  7%, 27% {
+    opacity: 100%;
+  }
+}
+
+.title-line-1 {
+  background: linear-gradient(to right, aqua, lightblue, aqua);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0%;
+}
+.title-line-2 {
+  animation-delay: 3s;
+  background: linear-gradient(to right, red, yellow, orange, yellow, red);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0%;
+}
+.title-line-3 {
+  animation-delay: 6s;
+  background: linear-gradient(to right, purple, violet, pink, violet, purple);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0%;
+}
+
+/* .red {
+  background: linear-gradient(to right, purple, violet, pink, purple);
+  background-size: 200%;
+  animation: background-scroll 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+
 
 #calc-logo {
   z-index: 1;

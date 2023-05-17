@@ -9,3 +9,20 @@ const trackCursor = (e) => {
 }
 
 document.addEventListener('pointermove', trackCursor);
+
+// const words = document.querySelectorAll('.title-line');
+// let currentIndex = 0;
+
+// function changeColor() {
+//   words.forEach(function(word, index) {
+//     if (index === currentIndex) {
+//       word.classList.add('red');
+//     } else {
+//       word.classList.remove('red');
+//     }
+//   });
+
+//   currentIndex = (currentIndex + 1) % words.length;
+// }
+
+// setInterval(changeColor, 2000);
