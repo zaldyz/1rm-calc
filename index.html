@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>1RM Calc</title>
+    <title>1RM Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="/imgs/duck.png" />
+    <link rel="icon" type="image/x-icon" href="/imgs/terminal.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,25 +31,25 @@
     <script defer src="src/index.js"></script>
   </head>
   <body>
-    <header>
-      <img id="duck-logo" src="imgs/duck.png" alt="cute duck logo" />
-      <p id="text-logo">1RM Calculator</p>
+    <header id="header">
+      <img id="terminal-logo" src="imgs/terminal.png" alt="website logo" />
+      <span id="text-logo">1RM Calculator</span>
     </header>
     <main>
       <div id="title-box">
         <div id="title-text">
           <div class="word-container">
-            <h1 class="title-line">ONE</h1>
+            <h1 class="title-line shadow">ONE</h1>
             <h1 class="title-line-1 title-line copy">ONE</h1>
           </div>
           <div class="word-container">
-            <h1 class="title-line" style="margin-left: 2rem">REP</h1>
+            <h1 class="title-line shadow" style="margin-left: 2rem">REP</h1>
             <h1 class="title-line-2 title-line copy" style="margin-left: 2rem">
               REP
             </h1>
           </div>
           <div class="word-container">
-            <h1 class="title-line" style="margin-left: 3rem">MAX</h1>
+            <h1 class="title-line shadow" style="margin-left: 3rem">MAX</h1>
             <h1 class="title-line-3 title-line copy" style="margin-left: 3rem">
               MAX
             </h1>
@@ -94,33 +94,33 @@
     <footer>
       <div class="footer-content">
         <ul class="social-links">
-          <li>
+          <li class="hidden">
             <a target="_blank" href="https://www.instagram.com/zaldyzz"
               ><i class="fa-brands fa-instagram"></i
             ></a>
           </li>
-          <li>
+          <li class="hidden">
             <a target="_blank" href="https://www.twitter.com/zaddyzt">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </li>
-          <li>
+          <li class="hidden">
             <a target="_blank" href="#">
               <i class="fa-brands fa-linkedin"></i>
             </a>
           </li>
-          <li>
+          <li class="hidden">
             <a target="_blank" href="https://open.spotify.com/user/shalloess">
               <i class="fa-brands fa-spotify"></i>
             </a>
           </li>
-          <li>
+          <li class="hidden">
             <a target="_blank" href="https://www.github.com/zaldyz">
               <i class="fa-brands fa-github"></i>
             </a>
           </li>
         </ul>
-        <h6>
+        <h6 id="designed-by" class="hidden">
           Designed by
           <a target="_blank" href="https://www.github.com/zaldyz">zaldyz</a>
         </h6>

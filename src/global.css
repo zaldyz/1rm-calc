@@ -1,4 +1,4 @@
-#duck-logo {
+#terminal-logo {
   height: 30px; 
   width: 30px;
   margin: 5px;
@@ -15,8 +15,13 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
   z-index: 1;
+  transition: border 2s;
+  border-bottom: 1px solid rgb(255, 255, 255, 0);
+}
+
+.visible {
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
 }
 
 main {
@@ -42,13 +47,11 @@ body {
 
 footer {
   border-top: 1px solid rgb(255, 255, 255, 0.1);
-  /* background-color: #111111; */
   backdrop-filter: blur(200px);
   z-index: 1;
 }
 
 #title-box {
-  /* background-color: green; */
   margin-top: 5rem;
   display: flex;
   gap: 5px;
@@ -60,7 +63,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: yellow; */
 }
 
 .title-line {
@@ -69,8 +71,8 @@ footer {
   line-height: 6.5rem;
 }
 
-#title-text {
-  /* position: relative; */
+.shadow {
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.66);
 }
 
 .word-container {
@@ -86,10 +88,10 @@ footer {
 
 @keyframes background-scroll {
   0% {
-    background-position: 0% center;
+    background-position: -200% center;
   }
   100% {
-    background-position: -200% center;
+    background-position: 0% center;
   }
 }
 
@@ -103,8 +105,8 @@ footer {
 }
 
 .title-line-1 {
-  background: linear-gradient(to right, aqua, lightblue, aqua);
-  background-size: 200%;
+  /* background: linear-gradient(90deg, rgba(207,136,255,1) 0%, rgba(255,99,99,1) 35%, rgba(255,192,104,1) 64%, rgba(255,155,116,1) 88%, rgba(207,136,255,1) 100%); */
+  background: linear-gradient(90deg, rgba(159,0,92,1) 0%, rgba(184,9,58,1) 29%, rgba(255,4,111,1) 58%, rgba(255,43,88,1) 81%, rgba(159,0,92,1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0%;
@@ -119,7 +121,8 @@ footer {
 }
 .title-line-3 {
   animation-delay: 6s;
-  background: linear-gradient(to right, purple, violet, pink, violet, purple);
+  /* background: linear-gradient(to right, purple, violet, pink, violet, purple); */
+  background: linear-gradient(90deg, rgba(112,53,154,1) 0%, rgba(220,99,255,1) 29%, rgba(255,104,200,1) 58%, rgba(175,98,255,1) 81%, rgba(112,53,154,1) 100%);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -199,6 +202,37 @@ li > a {
   width: 100%;
   position: fixed;
   backdrop-filter: blur(200px);
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(2.5px);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+#designed-by {
+  transition: all 2s;
+}
+
+li:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+li:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+li:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+li:nth-child(5) {
+  transition-delay: 400ms;
 }
 
 @keyframes rotate {

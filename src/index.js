@@ -10,19 +10,22 @@ const trackCursor = (e) => {
 
 document.addEventListener('pointermove', trackCursor);
 
-// const words = document.querySelectorAll('.title-line');
-// let currentIndex = 0;
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.isIntersecting ? entry.target.classList.add('show') : entry.target.classList.remove('show');
+  })
+});
 
-// function changeColor() {
-//   words.forEach(function(word, index) {
-//     if (index === currentIndex) {
-//       word.classList.add('red');
-//     } else {
-//       word.classList.remove('red');
-//     }
-//   });
+const headerFooterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.isIntersecting ? entry.target.classList.add('visible') : entry.target.classList.remove('visible');
+  })
+})
 
-//   currentIndex = (currentIndex + 1) % words.length;
-// }
-
-// setInterval(changeColor, 2000);
+const links = document.querySelectorAll('.hidden');
+const header = document.getElementById('header');
+console.log(header);
+headerFooterObserver.observe(header);
+links.forEach(link => {
+  observer.observe(link);
+})
