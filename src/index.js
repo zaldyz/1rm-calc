@@ -1,3 +1,12 @@
+import { calculate } from "./calculate.js";
+
+const weightInput = document.getElementById('weight-input');
+const repsInput = document.getElementById('reps-input');
+
+document.getElementById('calculate-btn').addEventListener('click', () => {
+  calculate(weightInput.value, repsInput.value);
+})
+
 const cursorCloud = document.getElementById('cursor-cloud');
 
 const trackCursor = (e) => {
