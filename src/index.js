@@ -4,7 +4,7 @@ const weightInput = document.getElementById('weight-input');
 const repsInput = document.getElementById('reps-input');
 
 document.getElementById('calculate-btn').addEventListener('click', () => {
-  calculate(weightInput.value, repsInput.value);
+  calculate(parseFloat(weightInput.value), parseInt(repsInput.value));
 })
 
 const cursorCloud = document.getElementById('cursor-cloud');
