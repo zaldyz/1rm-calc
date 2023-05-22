@@ -235,6 +235,7 @@ footer {
 
 .theme-button {
   color: black;
+  border: 1px solid white;
   border-radius: 5px;
   -webkit-border-radius: 5px;
 }
@@ -242,7 +243,9 @@ footer {
 .theme-button:hover {
   background: none;
   color: white;
-  outline: 1px solid white;
+  border: 1px solid white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 .theme-button:active {
