@@ -1,0 +1,34 @@
+
+/* Small devices */
+@media only screen and (max-width: 480px) {
+  #calc-svg {
+    height: 35vw;
+  }
+
+  .title-line {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+
+  #input-container {
+    max-width: 75vw;
+  }
+
+  #milestones-container {
+    min-width: 80vw;
+  }
+  
+  .milestone {
+    padding: 15px;
+    font-size: 50%;
+  }
+
+  .milestone-text {
+    font-size: 0.8rem;
+  }
+
+  #cursor-cloud {
+    height: 200px;
+    width: 200px;
+  }
+}

@@ -224,7 +224,7 @@ footer {
 }
 
 #calc-svg {
-  height: 20rem;
+  height: clamp(10rem, 45vh, 20rem);
   color: white;
 }
 
