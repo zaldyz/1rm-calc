@@ -32,35 +32,51 @@
   </head>
   <body>
     <header id="header">
-      <img id="terminal-logo" src="imgs/terminal.png" alt="website logo" />
-      <span id="text-logo">1RM Calculator</span>
+      <a id="header-content" href="#">
+        <img id="terminal-logo" src="imgs/terminal.png" alt="website logo" />
+        <span id="text-logo">1RM Calculator</span>
+      </a>
     </header>
     <main>
       <div id="title-box">
         <div id="title-text">
           <div class="word-container">
             <h1 class="title-line shadow">ONE</h1>
-            <h1 class="title-line-1 title-line copy">ONE</h1>
+            <h1 class="title-line-1 title-line copy" data-value="ONE">ONE</h1>
           </div>
           <div class="word-container">
             <h1 class="title-line shadow" style="margin-left: 2rem">REP</h1>
-            <h1 class="title-line-2 title-line copy" style="margin-left: 2rem">
+            <h1
+              class="title-line-2 title-line copy"
+              style="margin-left: 2rem"
+              data-value="REP"
+            >
               REP
             </h1>
           </div>
           <div class="word-container">
             <h1 class="title-line shadow" style="margin-left: 3rem">MAX</h1>
-            <h1 class="title-line-3 title-line copy" style="margin-left: 3rem">
+            <h1
+              class="title-line-3 title-line copy"
+              style="margin-left: 3rem"
+              data-value="MAX"
+            >
               MAX
             </h1>
           </div>
         </div>
-        <div id="calc-logo">
+        <div
+          id="calc-logo"
+          data-tilt
+          data-tilt-reverse="true"
+          data-tilt-speed="1700"
+        >
           <img id="calc-svg" src="imgs/calculator.png" alt="calculator logo" />
         </div>
       </div>
       <div id="input-container">
         <div
+          id="input-fields"
           class="input-group mb-3 input-group-md"
           style="
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px white;
@@ -91,6 +107,27 @@
         <button id="calculate-btn" class="btn theme-button">
           Calculate! <i class="fa-solid fa-calculator" style="margin: 3px"></i>
         </button>
+      </div>
+      <div id="results-container" class="result-hidden">
+        <div id="max-container">
+          <p>Your Estimated One Rep Max is</p>
+          <h1 id="max"></h1>
+        </div>
+        <h4>Next Milestones</h4>
+        <div id="milestones-container">
+          <div data-kg="0" data-reps="0" id="milestone1" class="milestone btn">
+            <p></p>
+            <h5></h5>
+          </div>
+          <div data-kg="0" data-reps="0" id="milestone2" class="milestone btn">
+            <p></p>
+            <h5></h5>
+          </div>
+          <div data-kg="0" data-reps="0" id="milestone3" class="milestone btn">
+            <p></p>
+            <h5></h5>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -143,6 +180,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="tilt/vanilla-tilt.js"></script>
   </body>
   <div id="cursor-cloud"></div>
   <div id="cursor-blur"></div>
