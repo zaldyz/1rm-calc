@@ -23,20 +23,25 @@ const trackCursor = (x, y) => {
   if (x && y) {
     cursorCloud.animate({
       left: `${x}px`,
-      top: `${y + window.scrollY}px`
+      // top: `${y + window.scrollY}px`
+      top: `${y}px`
     }, {duration: 2500, fill: "forwards"});
   }
 }
 
-document.addEventListener('pointermove', (e) => {
-  const { clientX, clientY } = e;
-  mouseX = clientX;
-  mouseY = clientY;
-  trackCursor(clientX, clientY);
-});
-window.addEventListener('scroll', () => {
-  trackCursor(mouseX, mouseY);
-});
+if (window.matchMedia('(pointer: fine)').matches) {
+  // Add event listener for cursor-based devices
+  document.addEventListener('pointermove', (e) => {
+    const { clientX, clientY } = e;
+    mouseX = clientX;
+    mouseY = clientY;
+    trackCursor(clientX, clientY);
+  });
+}
+
+// window.addEventListener('scroll', () => {
+//   trackCursor(mouseX, mouseY);
+// });
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
