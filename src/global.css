@@ -236,6 +236,7 @@ footer {
 .theme-button {
   color: black;
   border: 1px solid white;
+  background: white;
   border-radius: 5px;
   -webkit-border-radius: 5px;
 }
