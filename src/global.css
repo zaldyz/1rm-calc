@@ -308,7 +308,7 @@ button:focus {
 }
 
 #cursor-blur {
-  height: 100%;
+  height: 99.95%; /* Backdrop filter acts wierd at 99.97% or higher?? */
   width: 100%;
   position: fixed;
   backdrop-filter: blur(200px);
