@@ -39,10 +39,6 @@ if (window.matchMedia('(pointer: fine)').matches) {
   });
 }
 
-// window.addEventListener('scroll', () => {
-//   trackCursor(mouseX, mouseY);
-// });
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     entry.isIntersecting ? entry.target.classList.add('show') : entry.target.classList.remove('show');
@@ -62,35 +58,3 @@ headerFooterObserver.observe(header);
 links.forEach(link => {
   observer.observe(link);
 })
-
-// let intervals = [null, null, null];
-// const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-// const titles = document.getElementsByClassName('copy');
-// for (let i = 0; i < titles.length; i++) {
-//   titles[i].addEventListener('mouseover', (e) => {
-//     let iteration = 0;
-//     clearInterval(intervals[i]);
-    
-//     intervals[i] = setInterval(() => {
-//       const newText = e.target.innerText
-//       .split("")
-//       .map((letter, index) => {
-//         if(index < iteration) {
-//           return e.target.dataset.value[index];
-//         }
-      
-//         return letters[Math.floor(Math.random() * 26)]
-//       })
-//       .join("");
-//       e.target.innerText = newText;
-//       e.target.parentElement.firstElementChild.innerText = newText;
-
-//       if(iteration >= e.target.dataset.value.length){ 
-//         clearInterval(intervals[i]);
-//       }
-      
-//       iteration += 1/3;
-//     }, 50);
-//   })
-// }
