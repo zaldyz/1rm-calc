@@ -1,5 +1,4 @@
 export const calculate = (weight, reps) => {
-  // alert(`${weight}kg, ${reps} reps`);
   if (!weight || !reps) {
     return;
   }
